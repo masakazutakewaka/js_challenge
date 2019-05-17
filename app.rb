@@ -11,11 +11,11 @@ class App < Sinatra::Base
   end
 
   error Crawler::NotFoundError do
-    "The item was not found"
+    haml :not_found_error, format: :html5
   end
 
   error Crawler::ParseError do
-    "failed to parse the page"
+    haml :parse_error, format: :html5
   end
 
   get '/' do

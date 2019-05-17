@@ -29,7 +29,7 @@ class Crawler
   end
 
   def rank
-    parse(RANK_XPATH).content.match(/\#(\d+)/)[1]
+    parse(RANK_XPATH).content.match(/\#(\d+)/)[1].to_i
   end
 
   def dimension

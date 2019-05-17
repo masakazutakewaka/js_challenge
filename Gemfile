@@ -14,3 +14,8 @@ gem "nokogiri"
 group :development do
   gem "byebug"
 end
+
+group :test do
+  gem "rack-test"
+  gem "mocha"
+end

@@ -23,7 +23,7 @@ class App < Sinatra::Base
   end
 
   post '/search' do
-    url = "https://www.amazon.com/dp/#{params[:id]}"
+    url = "https://www.amazon.com/dp/#{params[:asin]}"
     crawler = Crawler.new(url)
     product = Product.create(crawler.parsed_result)
     haml :product, format: :html5, locals: { product: product }

@@ -7,6 +7,7 @@ This application takes ASIN (a unique identifier amazon uses for its products) a
 
 ```
 # cd /path/to/js_challenge
+$ docker-compose up -d
 $ bundle exec rake db:setup
 $ bundle exec rackup
 ```

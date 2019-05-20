@@ -44,7 +44,7 @@ class Crawler
 
   def doc
     @doc ||= Nokogiri::HTML(open(@url, { "User-Agent" => '' })) # need User-Agent to go through FireWall
-  rescue OpenURI::HTTPError
+  rescue OpenURI::HTTPError, URI::InvalidURIError
     raise NotFoundError
   end
 end
